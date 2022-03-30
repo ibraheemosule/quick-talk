@@ -1,9 +1,16 @@
 import { LayoutStyle } from "../styles/LayoutStyle.styled";
 import { ILayout } from "../ts-types/componentTypes";
+import Navbar from "./Navbar";
+import Image from "next/image";
+import bg from "../public/background.jpeg";
 
 const Layout: React.FC<ILayout> = ({ children }) => {
   return (
     <LayoutStyle>
+      <Navbar />
+      <div className="bg__wrapper">
+        <Image src={bg} objectFit="cover" objectPosition="top" alt="User avi" />
+      </div>
       <div>{children}</div>
     </LayoutStyle>
   );

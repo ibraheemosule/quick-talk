@@ -8,3 +8,5 @@ export interface ILayout {
 }
 
 export interface IHomePage {}
+
+export interface INavbar {}
