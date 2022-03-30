@@ -15,7 +15,10 @@ export const LayoutStyle = styled.main<IStyle>`
   }
 
   .children {
-    height: 90%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 10%;
     background: transparent;
   }
 `;

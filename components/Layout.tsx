@@ -9,7 +9,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
     <LayoutStyle>
       <Navbar />
       <div className="bg__wrapper">
-        <Image src={bg} objectFit="cover" objectPosition="top" alt="User avi" />
+        <Image src={bg} layout="fill" alt="User avi" />
       </div>
       <div className="children">{children}</div>
     </LayoutStyle>
