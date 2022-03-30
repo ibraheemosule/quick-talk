@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle<GlobalProps>`
 body {
     color: #555;
 }
+
+h1 {
+    color: rgba(7, 6, 6, 0.801);
+}
 `;
 
 export default GlobalStyle;
