@@ -51,7 +51,7 @@ export const retrieveData = (key: string) => {
 };
 
 //FUNCTION TO CHECK IF A URL IS PRESENT IN THE MESSAGE SENT
-export function isUrl(_string: string) {
+export function isUrl(_string: string): string {
   var urlRE = new RegExp(
     "([a-zA-Z0-9]+://)?([a-zA-Z0-9_]+:[a-zA-Z0-9_]+@)?([a-zA-Z0-9.-]+\\.[A-Za-z]{2,4})(:[0-9]+)?([^ ])+"
   );

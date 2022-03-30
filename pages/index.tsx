@@ -6,6 +6,7 @@ import { HomeStyle } from "../styles/HomeStyle.styled";
 import { Msg, retrieveData, saveData, isUrl } from "../assets/utils";
 import { useEffect, useState, FormEvent, MouseEvent, ChangeEvent } from "react";
 import TrashIcon from "../assets/svgs/TrashIcon";
+import { LinkPreview } from "@dhaiwat10/react-link-preview";
 
 const HomePage: NextPage<IHomePage> = () => {
   const [messages, setMessages] = useState<IMsgInfo[]>([]);
@@ -76,6 +77,17 @@ const HomePage: NextPage<IHomePage> = () => {
           ? messages.map(val => (
               <div className="received__msg" key={val.id}>
                 {val.text}
+
+                {val.url && (
+                  <LinkPreview
+                    margin="10px 0"
+                    url={val.url}
+                    width="100%"
+                    height="100%"
+                    showPlaceholderIfNoImage={true}
+                    showLoader={false}
+                  />
+                )}
                 <div className="received__msg-time">
                   <span>
                     {val.time}

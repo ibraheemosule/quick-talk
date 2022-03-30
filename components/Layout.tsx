@@ -11,7 +11,7 @@ const Layout: React.FC<ILayout> = ({ children }) => {
       <div className="bg__wrapper">
         <Image src={bg} objectFit="cover" objectPosition="top" alt="User avi" />
       </div>
-      <div>{children}</div>
+      <div className="children">{children}</div>
     </LayoutStyle>
   );
 };

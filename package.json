@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dhaiwat10/react-link-preview": "^1.13.1",
     "contentful": "^9.1.12",
     "next": "12.1.0",
     "react": "17.0.2",
