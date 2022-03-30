@@ -5,9 +5,7 @@ export const HomeStyle = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  height: 100%;
+  max-height: 100%;
 
   .wrapper {
     flex-grow: 1;

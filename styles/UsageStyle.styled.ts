@@ -5,8 +5,7 @@ export const UsageStyle = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
   height: 100%;
 
   .usage {

@@ -15,6 +15,8 @@ export const LayoutStyle = styled.main<IStyle>`
   }
 
   .children {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     height: 90%;
     background: transparent;
   }
