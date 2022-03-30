@@ -13,29 +13,35 @@ const userInfo = {
 const Profile: NextPage<IProfile> = () => (
   <>
     <Head>
-      <title>Quick Talk | Profile</title>
+      <title>Quick Chatter | Profile</title>
       <meta
         name="keywords"
-        content="quick talk app, chat app, chat, quick talk, messaging, project, chatting app, user profile"
+        content="Quick Chatter app, chat app, chat, Quick Chatter, messaging, project, chatting app, user profile"
       />
       <link rel="icon" href="/favicon.ico" />
 
-      <meta name="description" content="Quick Talk User Profile" />
+      <meta name="description" content="Quick Chatter User Profile" />
 
-      <meta name="twitter:image:src" content="https://quicktalk.vercel.app" />
+      <meta
+        name="twitter:image:src"
+        content="https://res.cloudinary.com/ibraheemsulay/image/upload/v1648650507/samples/quickchatter_ynptsb.png"
+      />
 
-      <meta name="twitter:site" content="Quick Talk | Application" />
+      <meta name="twitter:site" content="Quick Chatter | Application" />
 
-      <meta name="twitter:title" content="Quick Talk | Application" />
-      <meta name="twitter:description" content="Quick Talk User Profile" />
-      <meta property="og:image" content="https://quicktalk.vercel.app" />
-      <meta property="og:site_name" content="Quick Talk" />
+      <meta name="twitter:title" content="Quick Chatter | Application" />
+      <meta name="twitter:description" content="Quick Chatter User Profile" />
+      <meta
+        property="og:image"
+        content="https://res.cloudinary.com/ibraheemsulay/image/upload/v1648650507/samples/quickchatter_ynptsb.png"
+      />
+      <meta property="og:site_name" content="Quick Chatter" />
 
-      <meta property="og:title" content="Quick Talk User Profile" />
+      <meta property="og:title" content="Quick Chatter User Profile" />
 
       <meta property="og:url" content="https://quicktalk.vercel.app" />
 
-      <meta property="og:description" content="Quick Talk User Profile" />
+      <meta property="og:description" content="Quick Chatter User Profile" />
     </Head>
 
     <ProfileStyle>
