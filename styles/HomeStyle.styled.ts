@@ -8,6 +8,7 @@ export const HomeStyle = styled(Container)`
   padding-top: 2rem;
   padding-bottom: 2rem;
   height: 100%;
+  max-height: 100%;
 
   .wrapper {
     flex-grow: 1;
