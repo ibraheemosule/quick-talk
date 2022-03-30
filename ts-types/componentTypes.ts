@@ -12,3 +12,5 @@ export interface IHomePage {}
 export interface INavbar {}
 
 export interface IProfile {}
+
+export interface IUsage {}
