@@ -7,6 +7,7 @@ import { Msg, retrieveData, saveData, isUrl } from "../assets/utils";
 import { useEffect, useState, FormEvent, MouseEvent, ChangeEvent } from "react";
 import TrashIcon from "../assets/svgs/TrashIcon";
 import { LinkPreview } from "@dhaiwat10/react-link-preview";
+import Head from "next/head";
 
 const HomePage: NextPage<IHomePage> = () => {
   const [messages, setMessages] = useState<IMsgInfo[]>([]);
@@ -70,49 +71,82 @@ const HomePage: NextPage<IHomePage> = () => {
   };
 
   return (
-    <HomeStyle>
-      <div className="wrapper">
-        <h3>Beginning of your chat with Sarah Kyle</h3>
-        {messages.length
-          ? messages.map(val => (
-              <div className="received__msg" key={val.id}>
-                {val.text}
+    <>
+      <Head>
+        <title>Quick Talk</title>
+        <meta
+          name="keywords"
+          content="quick talk app, chat app, chat, quick talk, messaging, project, chatting app"
+        />
+        <link rel="icon" href="/favicon.ico" />
 
-                {val.url && (
-                  <LinkPreview
-                    margin="10px 0"
-                    url={val.url}
-                    width="100%"
-                    height="100%"
-                    showPlaceholderIfNoImage={true}
-                    showLoader={false}
-                  />
-                )}
-                <div className="received__msg-time">
-                  <span>
-                    {val.time}
-                    <CheckDoneSVG />
-                  </span>
-                  <button
-                    onDoubleClick={e => deleteMessage(e)}
-                    data-key={val.id}
-                  >
-                    <TrashIcon />
-                  </button>
+        <meta name="description" content="Quick Talk App" />
+
+        <meta name="twitter:image:src" content="https://quicktalk.vercel.app" />
+
+        <meta name="twitter:site" content="Quick Talk | Application" />
+
+        <meta name="twitter:title" content="Quick Talk | Application" />
+        <meta name="twitter:description" content="Quick Talk Application" />
+        <meta property="og:image" content="https://quicktalk.vercel.app" />
+        <meta property="og:site_name" content="Quick Talk" />
+
+        <meta property="og:title" content="Quick Talk Application" />
+
+        <meta property="og:url" content="https://quicktalk.vercel.app" />
+
+        <meta property="og:description" content="Quick Talk Application" />
+      </Head>
+
+      <HomeStyle>
+        <div className="wrapper">
+          <h3>Beginning of your chat with Sarah Kyle</h3>
+          {messages.length
+            ? messages.map(val => (
+                <div className="received__msg" key={val.id}>
+                  {val.text}
+
+                  {val.url && (
+                    <LinkPreview
+                      margin="10px 0"
+                      url={val.url}
+                      width="100%"
+                      height="100%"
+                      showPlaceholderIfNoImage={true}
+                      showLoader={false}
+                    />
+                  )}
+                  <div className="received__msg-time">
+                    <span>
+                      {val.time}
+                      <CheckDoneSVG />
+                    </span>
+                    <button
+                      onDoubleClick={e => deleteMessage(e)}
+                      data-key={val.id}
+                    >
+                      <TrashIcon />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))
-          : ""}
-      </div>
-      <form onSubmit={e => sendMessage(e)} className="input__wrapper">
-        <input
-          className="input-field"
-          placeholder="Type your message"
-          onChange={inputValue}
-        />{" "}
-        <input className="submit" type="submit" value="Send" />
-      </form>
-    </HomeStyle>
+              ))
+            : ""}
+        </div>
+        <form onSubmit={e => sendMessage(e)} className="input__wrapper">
+          <input
+            className="input-field"
+            placeholder="Type your message"
+            onChange={inputValue}
+          />{" "}
+          <input
+            className="submit"
+            spellCheck="true"
+            type="submit"
+            value="Send"
+          />
+        </form>
+      </HomeStyle>
+    </>
   );
 };
 

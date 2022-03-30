@@ -61,6 +61,10 @@ export const HomeStyle = styled(Container)`
       }
     }
 
+    .received__msg::first-letter {
+      text-transform: capitalize;
+    }
+
     h3 {
       text-align: center;
       padding: 1rem;

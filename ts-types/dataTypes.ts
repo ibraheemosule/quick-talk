@@ -2,5 +2,5 @@ export interface IMsgInfo {
   text: string;
   time: string;
   id: string;
-  url: string;
+  url: string | undefined;
 }
